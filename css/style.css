@@ -19,14 +19,9 @@ body {
 }
 
 .container {
+  display: flex;
   width: 960px;
   margin: 0 auto;
-}
-
-.clearfix::after {
-  display: table;
-  clear: both;
-  content: '';
 }
 
 img {
@@ -64,11 +59,11 @@ img {
 }
 
 .menu {
-  float: left;
   margin-top: 43px;
 }
 
 .menu ul {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -76,7 +71,6 @@ img {
 
 .menu li {
   position: relative;
-  float: left;
   margin-right: 35px;
 }
 
@@ -101,7 +95,7 @@ img {
 }
 
 .menu li:hover .submenu {
-  display: block;
+  display: flex;
 }
 
 .menu a {
@@ -131,10 +125,10 @@ img {
   top: 30px;
   left: 0;
   display: none;
+  flex-direction: column;
 }
 
 .submenu li {
-  float: none;
   width: 100%;
 }
 
@@ -143,6 +137,7 @@ img {
 }
 
 .header-bottom {
+  flex-direction: column;
   margin-top: 150px;
 }
 
@@ -171,7 +166,6 @@ img {
   position: relative;
   z-index: 1;
   padding-bottom: 85px;
-  font-size: 0;
 }
 
 .info::before {
@@ -187,14 +181,15 @@ img {
 }
 
 .slider {
-  display: inline-block;
+  display: flex;
   overflow: hidden;
+  flex-direction: column;
   width: 266px;
   margin-right: 44px;
-  vertical-align: top;
 }
 
 .slider .wrapper {
+  display: flex;
   width: 300%;
 }
 
@@ -203,7 +198,6 @@ input.toggle {
 }
 
 .slide {
-  float: left;
   width: 33.33%;
   margin-top: 20px;
   margin-bottom: 70px;
@@ -232,16 +226,17 @@ input.toggle {
 }
 
 .controls {
-  float: right;
+  display: flex;
+  margin-left: auto;
 }
 
 .controls label {
-  display: inline-block;
   padding: 10px 12px;
   background-color: #ffba6e;
 }
 
 .controls label::before {
+  display: block;
   content: '>';
   cursor: pointer;
   font-family: Quicksand, Arial, sans-serif;
@@ -270,8 +265,7 @@ input.toggle {
   margin-left: -200%;
 }
 
-#slide1:checked~.controls label[for='slide2'], #slide2:checked~.controls label[for='slide3'], #slide2:checked~.controls label[for='slide1'], #slide3:checked~.controls label[for='slide2']{
-  display: inline-block;
+#slide1:checked~.controls label[for='slide2'], #slide2:checked~.controls label[for='slide3'], #slide2:checked~.controls label[for='slide1'], #slide3:checked~.controls label[for='slide2'] {
   background-color: #fe992a;
 }
 
@@ -281,13 +275,11 @@ input.toggle {
 
 .info-content {
   position: relative;
-  display: inline-block;
   box-sizing: border-box;
   width: 650px;
   margin-top: 40px;
   padding-bottom: 85px;
   padding-left: 60px;
-  vertical-align: top;
 }
 
 .info-content::before {
@@ -327,7 +319,6 @@ input.toggle {
 }
 
 .footer-contacts {
-  float: left;
   font-family: "Myriad Pro", Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -346,11 +337,11 @@ input.toggle {
 }
 
 .footer-menu {
-  float: right;
+  display: flex;
+  margin-left: auto;
 }
 
 .footer-menu ul {
-  float: left;
   min-width: 70px;
   margin: 0;
   margin-right: 70px;
